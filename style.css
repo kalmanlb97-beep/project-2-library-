@@ -15,6 +15,10 @@ img {
     width: 100%;
 }
 
+p {
+    line-height: 1.5;
+}
+
 .nav__container {
     width: 100%;
     max-width: 1200px;
@@ -67,9 +71,7 @@ li {
     background-color: rgba(115,66, 214, 0.1)
 }
 
-header {
-    height: calc(100vh - 80px);
-}
+/* header */ 
 
 .header__container {
     width: 100%;
@@ -79,11 +81,19 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 120px;
+}
+
+.lady__book {
+    height: 100%;
+    max-height: 50vh;
+    padding-bottom: 120px;
 }
 
 .header__description {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -98,6 +108,7 @@ h2 {
     margin-bottom: 32px;
     text-align: center;
 }
+
 
 button {
     cursor: pointer;
@@ -115,4 +126,83 @@ button:active {
     border-radius: 4px;
     border: none;
     
+}
+
+.header__img--wrapper {
+    padding: 20px;
+}
+
+/* Main */
+
+.container {
+    padding: 56px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Highlights */
+
+#highlights {
+    position: relative;
+}
+
+#highlights:before {
+    content: "test";
+}
+
+#highlights:before {
+    background: url('assets/wave.svg');
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    top: 1px;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-100%);
+}
+
+.highlight__wrapper {
+    display: flex;
+    
+}
+
+.highlight {
+    padding: 0 24px;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.highlight__para {
+    text-align: center;
+    max-width: 280px;
+}
+
+.highlight__img {
+    border: 2px solid #a480ecaf;
+    color: #7342d6;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.highlight__subtitle {
+    font-size: 20px;
+    margin-bottom: 16px;
 }
