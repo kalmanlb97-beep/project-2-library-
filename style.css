@@ -72,13 +72,14 @@ li {
     text-decoration: none;
 }
 
-#landing {
-    background-color: rgba(115,66, 214, 0.1)
+/* hero */ 
+
+.hero {
+    background-color: rgba(115,66, 214, 0.1);
+    padding: 4rem 0;
 }
 
-/* header */ 
-
-.header__container {
+.hero__container {
     width: 100%;
     max-width: 720px;
     margin: 0 auto;
@@ -95,7 +96,7 @@ li {
     padding-bottom: 120px;
 }
 
-.header__description {
+.hero__description {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +134,7 @@ button:active {
     
 }
 
-.header__img--wrapper {
+.hero__img--wrapper {
     padding: 20px;
     z-index: 2;
 }
@@ -299,6 +300,22 @@ footer {
 .footer__logo--img {
     width: 160px;
     filter: grayscale(1) invert(1);
+}
+
+.footer__link {
+  text-decoration: none;         /* no underline by default */
+}
+
+.footer__link:hover {
+  text-decoration: underline;    /* underline on hover */
+}
+
+/* disabled footer links (About/Contact) */
+.footer__link--disabled {
+  cursor: not-allowed;
+  pointer-events: none;          /* ignore clicks */
+  opacity: 0.6;                  /* Appears disabled */
+  text-decoration: none;         /* no underline even on hover */
 }
 
 .footer__link,

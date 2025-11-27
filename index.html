@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a7a2713222.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <section id="landing">
+<body id="top">
+    <header>
         <nav>
         <div class="nav__container">
             <img class="logo" src="./assets/Library (2).svg" alt="">
@@ -19,21 +19,20 @@
         </ul>
         </div>
     </nav>
-    <header>
-        <div class="header__container">
-            <div class="header__description">
-                <h1>Americas's most awarded online library platform </h1>
+    </header>
+    <main>
+        <section id="landing" class="hero">
+        <div class="hero__container">
+            <div class="hero__description">
+                <h1>America's most awarded online library platform </h1>
                 <h2>Find your dream book with <span class="purple">Library</span></h2>
                 <button class="btn">Browse books</button>
             </div>
-            <figure class="header__img--wrapper">
+            <figure class="hero__img--wrapper">
                 <img class="lady__book" src="./assets/Undraw_Books.svg" alt="">
             </figure>
         </div>
-    </header>
     </section>
-
-    <main>
         <section id="highlights">
             <div class="container">
                 <div class="row">
@@ -339,11 +338,11 @@
                        <img src="./assets/Library (2).svg" class="footer__logo--img" alt="">
                     </figure>
                 </a>
-                <div class="footer__lsit">
-                    <a href="" class="footer__link">Home</a>
-                    <a href="" class="footer__link no-cursor" >About</a>
-                    <a href="" class="footer__link">Books</a>
-                    <a href="" class="footer__link no-cursor" >Contact</a>
+                <div class="footer__list">
+                    <a href="#top" class="footer__link">Home</a>
+                    <a href="#features" class="footer__link">Books</a>
+                    <a class="footer__link footer__link--disabled">About</a>
+                    <a class="footer__link footer__link--disabled">Contact</a>
                 </div>
                 <div class="footer__copyright">Copyright &copy; 2025 Library</div>
             </div>
