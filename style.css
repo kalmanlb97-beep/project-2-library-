@@ -6,6 +6,18 @@
     font-family: "Roboto", sans-serif;
 }
 
+.top-gradient {
+  /* soft overlay-style gradient */
+  background: linear-gradient(
+    90deg,
+    #f3eefc 0%,                          /* left blends into page */
+    rgba(115, 66, 214, 0.45) 35%,        /* semi-transparent purple */
+    rgba(77, 192, 232, 0.45) 65%,        /* semi-transparent blue */
+    #f3eefc 100%                         /* right blends into page */
+  );
+  padding-bottom: 80px;                  /* how far down the gradient goes */
+}
+
 body {
     max-width: 100wv;
     overflow-x: hidden;
@@ -14,6 +26,7 @@ body {
 nav {
     height: 80px;
     display: flex;
+    background: transparent;
 }
 
 img {
@@ -32,7 +45,9 @@ p {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+
 }
+    
 
 .purple {
     color: #7342d6;
@@ -44,6 +59,8 @@ p {
 
 ul {
     display: flex;
+    flex-direction: flex-end;
+
 }
 
 li {
@@ -51,7 +68,11 @@ li {
 }
 
 .nav__link {
-    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    line-height: 1;
+    padding: 0 16px;
     text-decoration: none;
     font-size: 20px;
     color: #7342d6;
@@ -66,6 +87,7 @@ li {
 .nav__link--primary {
     border: 2px solid #7342d6;
     border-radius: 4px;
+    background-color: light purple;
 }
 
 .nav__link--primary:hover {
@@ -77,6 +99,7 @@ li {
 .hero {
     background-color: rgba(115,66, 214, 0.1);
     padding: 4rem 0;
+    background: transparent;
 }
 
 .hero__container {
@@ -125,13 +148,56 @@ button:active {
 }
 
 .btn {
-    background-color: #7342d6;
+    background: linear-gradient(90deg, #7342d6, #7342d6);
     color: white;
     padding: 12px 24px;
     font-size: 20px;
     border-radius: 4px;
     border: none;
-    
+    transition: all 300ms ease;
+}
+
+.nav__button {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 6px;
+    border:none; 
+    background: linear-gradient(90deg, #7342d6, #7342d6);
+    transition: all 300ms ease;
+}
+
+.nav__button:hover {
+    background: linear-gradient(90deg, #7342d6, #4dc0e8);
+}
+
+.nav__button span {
+  display: inline-block;
+  transition: transform 300ms ease;
+}
+
+.nav__button:hover span {
+  transform: scale(1.08);
+}
+
+
+.btn:hover {
+   background: linear-gradient(90deg, #7342d6, #4dc0e8);
+}
+
+.btn span {
+  display: inline-block;          
+  transition: transform 300ms ease;
+}
+
+.btn:hover span {
+transform: scale(1.08);
 }
 
 .hero__img--wrapper {
