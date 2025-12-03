@@ -6,17 +6,24 @@
     font-family: "Roboto", sans-serif;
 }
 
-.top-gradient {
-  /* soft overlay-style gradient */
-  background: linear-gradient(
+:root {
+  --purple: #E9DDF9;
+  --purple-light: #F6E8FF;
+  --blue: #C9D8FF;
+
+  --main-gradient: linear-gradient(
     90deg,
-    #f3eefc 0%,                          /* left blends into page */
-    rgba(115, 66, 214, 0.45) 35%,        /* semi-transparent purple */
-    rgba(77, 192, 232, 0.45) 65%,        /* semi-transparent blue */
-    #f3eefc 100%                         /* right blends into page */
+    var(--purple-light) 0%,
+    var(--purple) 40%,
+    var(--blue) 100%
   );
-  padding-bottom: 80px;                  /* how far down the gradient goes */
 }
+
+.top-gradient {
+      background: var(--main-gradient);
+} 
+
+
 
 body {
     max-width: 100wv;
@@ -25,8 +32,8 @@ body {
 
 nav {
     height: 80px;
-    display: flex;
-    background: transparent;
+    width: 100%;
+    background-color: white;
 }
 
 img {
@@ -45,6 +52,7 @@ p {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    background-color: white;
 
 }
     
@@ -148,19 +156,21 @@ button:active {
 }
 
 .btn {
-    background: linear-gradient(90deg, #7342d6, #7342d6);
+    background: linear-gradient(90deg, #8f57ff, #8f57ff);
     color: white;
     padding: 12px 24px;
     font-size: 20px;
     border-radius: 4px;
     border: none;
     transition: all 300ms ease;
+    font-weight: bold;
 }
 
 .nav__button {
     display: flex;
     align-items: center;
     margin-top: 20px;
+    margin-left: 6px;
     height: 40px;
     text-decoration: none;
     font-size: 20px;
@@ -169,12 +179,13 @@ button:active {
     padding: 8px;
     border-radius: 6px;
     border:none; 
-    background: linear-gradient(90deg, #7342d6, #7342d6);
+    transition: all 300ms ease;
+     background: linear-gradient(90deg, #8f57ff, #8f57ff);
     transition: all 300ms ease;
 }
 
 .nav__button:hover {
-    background: linear-gradient(90deg, #7342d6, #4dc0e8);
+     background: linear-gradient(90deg, #8f57ff, #6c8cff);
 }
 
 .nav__button span {
@@ -188,7 +199,7 @@ button:active {
 
 
 .btn:hover {
-   background: linear-gradient(90deg, #7342d6, #4dc0e8);
+    background: linear-gradient(90deg, #8f57ff, #6c8cff);
 }
 
 .btn span {
@@ -300,7 +311,23 @@ transform: scale(1.08);
 
 #features {
     padding-top: 8vw;
-    background-color: rgba(115, 66, 214, 0.1);
+    padding-bottom: 8vw;
+    position: relative;
+    max-width: 100vw;
+   background: linear-gradient(90deg, #8f57ff, #6c8cff);
+}
+
+#features:before,
+#features:after {
+    background: url('assets/wave.svg');
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .books {
