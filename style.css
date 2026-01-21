@@ -71,6 +71,7 @@ p {
 
 .logo {
     width: 160px;
+    margin-top: 20px;
 }
 
 ul {
@@ -190,6 +191,7 @@ button:active {
     text-align: center;
     border: none;
     color: #8f57ff;
+    display: none;margin-top: 20px;
 }
 
 .menu__backdrop {
@@ -588,8 +590,13 @@ footer {
 
  }
 @media (max-width: 768px)  {
-
+    .btn__menu {
+        display: block;
+    }
+    .nav__links {
+        display: none;
+    }
  }
 @media (max-width: 480px)  { 
-    
+
 }
