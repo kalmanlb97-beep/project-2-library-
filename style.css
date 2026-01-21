@@ -203,11 +203,16 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .menu--open .menu__backdrop {
+    visibility: visible;
     display: flex;
+    opacity: 1;
 }
 
 .menu__links {
